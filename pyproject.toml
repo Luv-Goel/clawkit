@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clawkit"
+version = "0.1.0"
+description = "Unified DevOps CLI toolkit — duplicate finder, dotenv toolkit, file integrity monitor, permissions auditor, markdown toolkit, tabular data CLI, log forensics, secret scanner"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = []
+
+[project.scripts]
+clawkit = "clawkit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["clawkit*"]
