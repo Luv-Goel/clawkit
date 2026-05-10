@@ -2,14 +2,16 @@
 
 <div align="center">
 
-[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)]()
+[![Version](https://img.shields.io/badge/version-0.2.0-blue.svg)]()
 [![Python](https://img.shields.io/badge/python-3.8%2B-brightgreen)](https://python.org)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Dependencies](https://img.shields.io/badge/dependencies-zero-lightgrey)]()
+[![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?logo=github-actions)]()
+[![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20windows-lightgrey)]()
 
-**Unified DevOps CLI toolkit — 8 tools in one. Zero dependencies.**
+**Unified DevOps CLI toolkit — 9 tools in one. Zero dependencies.**
 
-`clawkit` merges 8 focused CLI tools into a single, cohesive package. The original individual repos are now **archived** — all development continues here. One `pip install` gives you a duplicate finder, .env toolkit, file integrity monitor, permissions auditor, markdown toolkit, tabular data CLI, log forensics engine, and secret scanner.
+`clawkit` merges 9 focused CLI tools into a single, cohesive package. The original individual repos are now **archived** — all development continues here. One `pip install` gives you a duplicate finder, .env toolkit, file integrity monitor, permissions auditor, markdown toolkit, tabular data CLI, log forensics engine, secret scanner, and log forensics scanner.
 
 </div>
 
@@ -62,6 +64,12 @@ clawkit logs report access.log --output report.html
 # Secret scanner
 clawkit secrets scan ~/project --format json
 clawkit secrets scan ~/project --format html -o secrets.html
+
+# Log forensics scanner (NEW!)
+clawkit logscan access.log
+clawkit logscan access.log --anomalies
+clawkit logscan syslog.log --format syslog --anomalies
+clawkit logscan app.json --format json --output report.html
 ```
 
 ## CLI Reference
@@ -76,6 +84,7 @@ clawkit secrets scan ~/project --format html -o secrets.html
 | `clawkit data` | Tabular data CLI — select, filter, group, join, stats | tally |
 | `clawkit logs` | Log file parsing, analysis, search, HTML reports | logsmith |
 | `clawkit secrets` | Secret scanner — 20+ patterns, entropy detection | vault |
+| `clawkit logscan` | Log forensics scanner — parse, detect anomalies, HTML reports | *new* |
 
 ## Architecture
 
@@ -91,17 +100,21 @@ clawkit/
 │   │   ├── markdown.py     # Markdown toolkit
 │   │   ├── data.py         # Tabular data CLI
 │   │   ├── logs.py         # Log forensics
-│   │   └── secrets.py      # Secret scanner
+│   │   ├── secrets.py      # Secret scanner
+│   │   └── logscan.py      # Log forensics scanner (NEW)
 │   └── utils/
 │       └── __init__.py     # Shared HTML report helpers
 ├── tests/
+├── .github/workflows/ci.yml
 ├── pyproject.toml
+├── CONTRIBUTING.md
+├── SECURITY.md
 └── README.md
 ```
 
 ## All Tools Included
 
-This project consolidates 8 previously separate repositories:
+This project consolidates 9 tools into one package:
 
 | Original (Archived) | Now | Description |
 |----------|-----|-------------|
@@ -113,13 +126,16 @@ This project consolidates 8 previously separate repositories:
 | [tally](https://github.com/Luv-Goel/tally) → *archived* | `clawkit data` | Tabular data CLI |
 | [logsmith](https://github.com/Luv-Goel/logsmith) → *archived* | `clawkit logs` | Log forensics |
 | [vault](https://github.com/Luv-Goel/vault) → *archived* | `clawkit secrets` | Secret scanner |
+| *new* | `clawkit logscan` | Log forensics scanner |
 
 ## Features
 
 - **Zero external dependencies** — Pure Python 3.8+, stdlib only
-- **HTML reports** — Beautiful dark-mode reports for scan, integrity, audit, and secrets
+- **HTML reports** — Beautiful dark-mode reports for scan, integrity, audit, secrets, and logscan
 - **Unified interface** — Every tool uses consistent CLI argument patterns
 - **CI/CD ready** — Exit codes for pipeline integration (SARIF support for secrets)
+- **Anomaly detection** — logscan detects error rate spikes, unusual IPs, suspicious paths
+- **Format auto-detection** — logscan automatically detects Apache, syslog, and JSON formats
 
 ## License
 

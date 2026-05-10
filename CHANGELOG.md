@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.2.0 — 2026-05-10
+
+### Added
+- **`clawkit logscan`** — New log forensics scanner command (separate from `logs`):
+  - Parses Apache, syslog, and JSON-lines log formats with auto-detection
+  - Anomaly detection: error rate spikes, unusual IPs, suspicious paths, traffic spikes
+  - HTML report with warnings, spikes, suspicious paths, and top sources
+  - Rich terminal output with emoji indicators
+- .github/workflows/ci.yml — GitHub Actions CI (pytest on Python 3.10-3.12)
+- .gitattributes — Text/binary file handling configuration
+- CONTRIBUTING.md — Contribution guide
+- SECURITY.md — Security policy
+
+### Changed
+- README updated with new logscan examples, 9-tool table, badges
+- CLI and pyproject.toml updated to reflect 9 tools
+
 ## v0.1.0 — 2026-05-10
 
 Initial release — merge 8 focused CLI tools into one unified toolkit.

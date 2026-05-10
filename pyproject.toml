@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "clawkit"
 version = "0.1.0"
-description = "Unified DevOps CLI toolkit — duplicate finder, dotenv toolkit, file integrity monitor, permissions auditor, markdown toolkit, tabular data CLI, log forensics, secret scanner"
+description = "Unified DevOps CLI toolkit — duplicate finder, dotenv toolkit, file integrity monitor, permissions auditor, markdown toolkit, tabular data CLI, log forensics, secret scanner, log scan. 9 tools in one. Zero external dependencies."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.8"

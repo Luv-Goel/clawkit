@@ -3,7 +3,7 @@
 import argparse
 import sys
 from . import __version__
-from .commands import scan, dotenv, integrity, audit, markdown, data, logs, secrets
+from .commands import scan, dotenv, integrity, audit, markdown, data, logs, secrets, logscan
 
 
 COMMANDS = {
@@ -15,15 +15,16 @@ COMMANDS = {
     "data": data,
     "logs": logs,
     "secrets": secrets,
+    "logscan": logscan,
 }
 
 
 def main():
     parser = argparse.ArgumentParser(
         prog="clawkit",
-        description="Unified DevOps CLI toolkit — 8 tools in one.",
+        description="Unified DevOps CLI toolkit — 9 tools in one.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
+        epilog="""\
 Commands:
   scan        Duplicate file finder (sift)
   dotenv      .env file toolkit
@@ -33,6 +34,7 @@ Commands:
   data        Tabular data CLI (tally)
   logs        Log file forensics (logsmith)
   secrets     Code secret scanner (vault)
+  logscan     Log forensics scanner (parse + anomaly detection)
 
 Use 'clawkit <command> --help' for detailed help on each command.
         """,
