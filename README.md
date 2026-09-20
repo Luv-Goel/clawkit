@@ -140,3 +140,4 @@ This project consolidates 9 tools into one package:
 ## License
 
 MIT — see [LICENSE](LICENSE).
+Added a line to improve README
