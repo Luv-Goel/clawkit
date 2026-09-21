@@ -11,7 +11,7 @@
 
 **Unified DevOps CLI toolkit — 9 tools in one. Zero dependencies.**
 
-`clawkit` merges 9 focused CLI tools into a single, cohesive package. The original individual repos are now **archived** — all development continues here. One `pip install` gives you a duplicate finder, .env toolkit, file integrity monitor, permissions auditor, markdown toolkit, tabular data CLI, log forensics engine, secret scanner, and log forensics scanner.
+`clawkit` merges 9 focused CLI tools into a single, cohesive package. The original individual repos are now **consolidated into clawkit** — all development continues here. One `pip install` gives you a duplicate finder, .env toolkit, file integrity monitor, permissions auditor, markdown toolkit, tabular data CLI, log forensics engine, secret scanner, and log forensics scanner.
 
 </div>
 
@@ -116,16 +116,16 @@ clawkit/
 
 This project consolidates 9 tools into one package:
 
-| Original (Archived) | Now | Description |
+| Original | Now | Description |
 |----------|-----|-------------|
-| [sift](https://github.com/Luv-Goel/sift) → *archived* | `clawkit scan` | Duplicate file finder |
-| [dotenv](https://github.com/Luv-Goel/dotenv) → *archived* | `clawkit dotenv` | .env file toolkit |
-| [warden](https://github.com/Luv-Goel/warden) → *archived* | `clawkit integrity` | File integrity monitor |
-| [perm](https://github.com/Luv-Goel/perm) → *archived* | `clawkit audit` | Security permissions auditor |
-| [mark](https://github.com/Luv-Goel/mark) → *archived* | `clawkit markdown` | Markdown toolkit |
-| [tally](https://github.com/Luv-Goel/tally) → *archived* | `clawkit data` | Tabular data CLI |
-| [logsmith](https://github.com/Luv-Goel/logsmith) → *archived* | `clawkit logs` | Log forensics |
-| [vault](https://github.com/Luv-Goel/vault) → *archived* | `clawkit secrets` | Secret scanner |
+| [sift](https://github.com/Luv-Goel/sift) → *merged* | `clawkit scan` | Duplicate file finder |
+| [dotenv](https://github.com/Luv-Goel/dotenv) → *merged* | `clawkit dotenv` | .env file toolkit |
+| [warden](https://github.com/Luv-Goel/warden) → *merged* | `clawkit integrity` | File integrity monitor |
+| [perm](https://github.com/Luv-Goel/perm) → *merged* | `clawkit audit` | Security permissions auditor |
+| [mark](https://github.com/Luv-Goel/mark) → *merged* | `clawkit markdown` | Markdown toolkit |
+| [tally](https://github.com/Luv-Goel/tally) → *merged* | `clawkit data` | Tabular data CLI |
+| [logsmith](https://github.com/Luv-Goel/logsmith) → *merged* | `clawkit logs` | Log forensics |
+| [vault](https://github.com/Luv-Goel/vault) → *merged* | `clawkit secrets` | Secret scanner |
 | *new* | `clawkit logscan` | Log forensics scanner |
 
 ## Features
